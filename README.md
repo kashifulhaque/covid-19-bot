@@ -4,8 +4,10 @@
 ### Want to add the bot to your server?
 > Link will be updated here
 
-• Use **!covid-19** to get Nation-wide COVID-19 stats or **!covid-19 states** to get7a list of states with their statecodes.\n
-• You can also type **!covid-19 <statecode>** to get stats about that particular state. Example: **`!covid-19 DL`** will show current stats of New Delhi.\n
+• Use **!covid-19** to get Nation-wide COVID-19 stats or **!covid-19 states** to get7a list of states with their statecodes.
+
+• You can also type **!covid-19 <statecode>** to get stats about that particular state. Example: **`!covid-19 DL`** will show current stats of New Delhi.
+  
 • You can also type **!covid-19 <statecode> district** to get district-wise stats of that particular state. Example: **`!covid-19 WB district`** will show current district-wise stats of West Bengal.
 
 ### How to get the source code
