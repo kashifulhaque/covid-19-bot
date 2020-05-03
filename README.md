@@ -1,5 +1,5 @@
 # A COVID-19 India Discord bot
-> An unofficial Discord bot which uses the [COVID-19 India](https://www.covid19india.org/) API to fetch current Coronavirus stats in India!
+> An unofficial Discord bot which uses the [COVID-19 India](https://www.covid19india.org/) [API](https://github.com/covid19india/api) to fetch current Coronavirus stats in India!
 
 ### Want to add the bot to your server?
 > Link will be updated here
