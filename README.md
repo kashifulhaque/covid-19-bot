@@ -10,7 +10,7 @@
   
 • You can also type **!covid-19 <statecode> district** to get district-wise stats of that particular state. Example: **`!covid-19 WB district`** will show current district-wise stats of West Bengal.
 
-### How to get the source code
+### How do I get the source code
 
 1. Make sure you have Node.js installed (version 12 or above). If you don't have Node.js installed, you can download it [here](https://nodejs.org/en/)
 2. Run `git clone https://github.com/kashifulhaque/covid-19-bot.git` in a directory
