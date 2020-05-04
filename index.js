@@ -34,8 +34,6 @@ function fetchData() {
       totalRecovered = statewise[0].recovered;
       totalDeaths = statewise[0].deaths;
       lastUpdated = statewise[0].lastupdatedtime;
-
-      console.log(lastUpdated);
     })
     .catch((error) => {
       console.log(error);
@@ -78,6 +76,7 @@ client.on("message", (message) => {
         "**Type in `!covid-19 states` to get a list of states with statecodes**."
       )
       .setFooter("COVID-19 India unofficial Discord bot", mainWebsiteFavicon);
+
     let remainingStates;
 
     const code =
@@ -90,7 +89,7 @@ client.on("message", (message) => {
         ? ""
         : messageContent.split(" ")[2].trim();
 
-    if (code == null || code.length == 0) {
+    if (code == null || code.length == 0)
       embed.addFields(
         {
           name: "**Total # of cases**",
@@ -113,7 +112,6 @@ client.on("message", (message) => {
           value: lastUpdated,
         }
       );
-    }
 
     if (code.toLowerCase() == "states") {
       const description =
@@ -121,6 +119,7 @@ client.on("message", (message) => {
 
       embed.setDescription(description);
 
+      // Discord allows upto 25 fields only
       if (statewise.length > 25) {
         remainingStates = new Discord.MessageEmbed().setColor(embedColor);
       }
@@ -140,6 +139,8 @@ client.on("message", (message) => {
       });
     }
 
+    //         !covid    WB      district
+    // Query: "!covid ${code} ${codeParam1}"
     if (code.length == 2) {
       if (codeParam1.toLowerCase() == "district") {
         districtwise.forEach((item, index) => {
