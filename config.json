@@ -1,7 +1,0 @@
-{
-  "prefix": "!",
-  "discordToken": "NzA2MjExMjgzNTc3NjAyMTc5.Xq3DvQ.3sd7sRK4RRBeoNQpkbvXjmMwk_0",
-  "discordClientID": "706211283577602179",
-  "discordClientSecret": "dXkIa8Y5fagmQg1KIZekSjeLF2JLlr2t",
-  "inviteURL": "https://discordapp.com/api/oauth2/authorize?client_id=706211283577602179&permissions=251904&scope=bot"
-}
