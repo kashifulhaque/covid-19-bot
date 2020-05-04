@@ -17,7 +17,7 @@ let totalDeaths;
 let lastUpdated;
 let statewise;
 let districtwise;
-const hour = 10000; // DO NOT FORGET TO CHANGE THIS to 1000 * 60 * 60 before deploying
+const hour = 1000 * 60 * 60; // DO NOT FORGET TO CHANGE THIS to 1000 * 60 * 60 before deploying
 const embedColor = "#90ee90";
 
 // Initialize a Discord client
@@ -34,6 +34,8 @@ function fetchData() {
       totalRecovered = statewise[0].recovered;
       totalDeaths = statewise[0].deaths;
       lastUpdated = statewise[0].lastupdatedtime;
+
+      console.log(lastUpdated);
     })
     .catch((error) => {
       console.log(error);
@@ -56,7 +58,7 @@ client.once("ready", () => {
   client.user.setActivity("!covid-19", { type: "WATCHING" });
 
   fetchData();
-  setTimeout(fetchData, hour);
+  setInterval(fetchData, hour);
 });
 
 // Listen for messages
