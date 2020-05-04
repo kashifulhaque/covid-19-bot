@@ -1,3 +1,5 @@
+// Developed by Kashiful Haque
+
 const Discord = require("discord.js");
 const config = require("./config.json");
 const axios = require("axios");
@@ -21,6 +23,7 @@ const hour = 1000 * 60 * 60; // DO NOT FORGET TO CHANGE THIS to 1000 * 60 * 60 b
 const embedColor = "#90ee90";
 
 // Initialize a Discord client
+
 const client = new Discord.Client();
 
 // Get data from the api using axios
