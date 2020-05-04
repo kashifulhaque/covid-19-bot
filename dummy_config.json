@@ -1,0 +1,7 @@
+{
+  "prefix": "!",
+  "discordToken": "YOUR_DISCORD_TOKEN",
+  "discordClientID": "YOUR_DISCORD_CLIENT_ID",
+  "discordClientSecret": "YOUR_DISCORD_CLIENT_SECRET",
+  "inviteURL": "https://discordapp.com/api/oauth2/authorize?client_id=706211283577602179&permissions=251904&scope=bot"
+}
