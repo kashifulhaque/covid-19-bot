@@ -32,6 +32,7 @@ function fetchData() {
     .get(apiURL)
     .then((res) => {
       statewise = res.data.statewise;
+    
       totalCases = statewise[0].confirmed;
       totalActive = statewise[0].active;
       totalRecovered = statewise[0].recovered;
@@ -46,6 +47,7 @@ function fetchData() {
     .get(apiURL_district)
     .then((res) => {
       districtwise = res.data;
+      console.log(districtwise[0])
     })
     .catch((error) => {
       console.log(error);
@@ -86,6 +88,7 @@ client.on("message", (message) => {
       messageContent.split(" ")[1] == null
         ? ""
         : messageContent.split(" ")[1].trim();
+        console.log(code)
 
     const codeParam1 =
       messageContent.split(" ")[2] == null
@@ -118,7 +121,7 @@ client.on("message", (message) => {
 
     if (code.toLowerCase() == "states") {
       const description =
-        "**• Type in `!covid-19 <statecode>` to get details about that state**.\nExample: `!covid-19 DL` to get details about New Delhi.\n\n• **Type `!covid-19 <statecode> district` to get district-wise breakdown**.\nExample: `!covid-19 MH district` to get district-wise details about Maharashtra";
+        "**• Type in `!covid-19 <statecode>` to get details about that state**.\nExample: `!covid-19 DL` to get details about New Delhi.\n\n• **Type `!covid-19 <statecode> districtwise` to get district-wise breakdown**.\nExample: `!covid-19 MH districtwise` to get district-wise details about Maharashtra";
 
       embed.setDescription(description);
 
@@ -145,8 +148,11 @@ client.on("message", (message) => {
     //         !covid    WB      district
     // Query: "!covid ${code} ${codeParam1}"
     if (code.length == 2) {
-      if (codeParam1.toLowerCase() == "district") {
-        districtwise.forEach((item, index) => {
+      if (codeParam1.toLowerCase() == "districtwise") {
+        const sorted= districtwise.sort(function(a,b){
+          return b.confirmed-a.confirmed
+        })
+        sorted.forEach((item, index) => {
           if (item.statecode == code.toUpperCase()) {
             embed.setDescription(
               "**District-wise cases of " + item.state + "**"
