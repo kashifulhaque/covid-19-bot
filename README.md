@@ -4,7 +4,7 @@
 
 ### Want to add the bot to your server?
 
-> [Add to your server](bit.ly/covid19discordbot)
+> [Add to your server](https://bit.ly/covid19discordbot)
 
 • Use **!covid-19** to get Nation-wide COVID-19 stats or **!covid-19 states** to get7a list of states with their statecodes.
 
