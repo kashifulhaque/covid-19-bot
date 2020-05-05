@@ -17,7 +17,7 @@
 1. Make sure you have Node.js installed (version 12 or above). If you don't have Node.js installed, you can download it [here](https://nodejs.org/en/)
 2. Run `git clone https://github.com/kashifulhaque/covid-19-bot.git` in a directory
 3. `cd covid-19-bot`
-4. Rename `dummy_config.json` to `config.json` and open it. Add the necessary keys. Save & close the file.
+4. Create a file named `config.json` and open it. Copy the JSON model from `dummy_config.json` and paste it in newly created `config.json`. Add your necessary tokens and keys from the [Discord Developer Website](https://discordapp.com/developers/applications).
 5. Run `npm install` in the directory.
 6. To run the app, type `node index.js` in the console or you may use `nodemon`/`pm2`. Check their respective documentation on how to use 'em.
 
