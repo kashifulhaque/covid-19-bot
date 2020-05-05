@@ -10,7 +10,7 @@
 
 • You can also type **!covid-19 <statecode>** to get stats about that particular state. Example: **`!covid-19 DL`** will show current stats of New Delhi.
 
-• You can also type **!covid-19 <statecode> district** to get district-wise stats of that particular state. Example: **`!covid-19 WB district`** will show current district-wise stats of West Bengal.
+• You can also type **!covid-19 <statecode> districtwise** to get district-wise stats of that particular state. Example: **`!covid-19 WB districtwise`** will show current district-wise stats of West Bengal.
 
 ### How do I get the source code
 
