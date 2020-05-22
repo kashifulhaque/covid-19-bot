@@ -22,8 +22,7 @@ let districtwise;
 const hour = 1000 * 60 * 60; // DO NOT FORGET TO CHANGE THIS to 1000 * 60 * 60 before deploying
 const embedColor = "#90ee90";
 
-// Initialize a Discord client
-
+// Initialize a Discord.js client
 const client = new Discord.Client();
 
 // Get data from the api using axios
@@ -33,9 +32,12 @@ function fetchData() {
     .then((res) => {
       statewise = res.data.statewise;
       totalCases = statewise[0].confirmed;
+      deltaTotalCases = statewise[0].deltaconfirmed;
       totalActive = statewise[0].active;
       totalRecovered = statewise[0].recovered;
+      deltaRecovered = statewise[0].deltarecovered;
       totalDeaths = statewise[0].deaths;
+      deltaDeaths = statewise[0].deltadeaths;
       lastUpdated = statewise[0].lastupdatedtime;
     })
     .catch((error) => {
@@ -96,7 +98,7 @@ client.on("message", (message) => {
       embed.addFields(
         {
           name: "**Total # of cases**",
-          value: totalCases,
+          value: totalCases + " (+" + deltaTotalCases + ")",
         },
         {
           name: "**Active cases**",
@@ -104,14 +106,14 @@ client.on("message", (message) => {
         },
         {
           name: "**Recovery**",
-          value: totalRecovered,
+          value: totalRecovered + " (+" + deltaRecovered + ")",
         },
         {
           name: "**Deaths**",
-          value: totalDeaths,
+          value: totalDeaths + " (+" + deltaDeaths + ")",
         },
         {
-          name: "*Last updated*",
+          name: "**Last updated**",
           value: lastUpdated,
         }
       );
@@ -193,7 +195,7 @@ client.on("message", (message) => {
               .addFields(
                 {
                   name: "**Total cases**",
-                  value: item.confirmed,
+                  value: item.confirmed + " (+" + item.deltaconfirmed + ")",
                 },
                 {
                   name: "**Active cases**",
@@ -201,11 +203,11 @@ client.on("message", (message) => {
                 },
                 {
                   name: "**Recovered**",
-                  value: item.recovered,
+                  value: item.recovered + " (+" + item.deltarecovered + ")",
                 },
                 {
                   name: "**Deaths**",
-                  value: item.deaths,
+                  value: item.deaths + " (+" + item.deltadeaths + ")",
                 },
                 {
                   name: "Last updated on",
