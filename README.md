@@ -21,4 +21,10 @@
 5. Run `npm install` in the directory.
 6. To run the app, type `node index.js` in the console or you may use `nodemon`/`pm2`. Check their respective documentation on how to use 'em.
 
+### Screenshots
+
+![!covid-19 Command](https://github.com/kashifulhaque/covid-19-bot/raw/master/assets/img/covid1.png)
+
+![!covid-19 <statecode> Command](https://github.com/kashifulhaque/covid-19-bot/raw/master/assets/img/covid2.png)
+
 _If you're facing an error, make sure that you're on Node.js v12 or higher._
