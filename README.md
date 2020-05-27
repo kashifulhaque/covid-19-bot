@@ -6,7 +6,7 @@
 
 > [Add to your server](https://bit.ly/covid19discordbot)
 
-• Use **!covid-19** to get Nation-wide COVID-19 stats or **!covid-19 states** to get7a list of states with their statecodes.
+• Use **!covid-19** to get Nation-wide COVID-19 stats or **!covid-19 states** to get a list of states with their statecodes.
 
 • You can also type **!covid-19 <statecode>** to get stats about that particular state. Example: **`!covid-19 DL`** will show current stats of New Delhi.
 
