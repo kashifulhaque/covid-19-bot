@@ -10,7 +10,7 @@
   "author": "kashifulhaque",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.21.0",
+    "axios": "^0.21.1",
     "discord.js": "^12.5.1"
   }
 }
